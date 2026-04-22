@@ -26,7 +26,18 @@ apic:
           vrf: prod.prod-vrf
           subnets:
             - ip: 10.1.103.1/24
+              nd_ra_prefix: true
 
+        - name: 10.1.104.0_24
+          vrf: prod.prod-vrf
+          subnets:
+            - ip: 10.1.104.1/24
+            
+        - name: 10.1.105.0_24
+          vrf: prod.prod-vrf
+          subnets:
+            - ip: 10.1.105.1/24
+              nd_ra_prefix: true
       application_profiles:
         - name: vlans
           endpoint_groups:
